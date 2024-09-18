@@ -8,6 +8,8 @@ def main():
     df_raw = load_data()
 
     st.dataframe(df_raw)
+
+def create_dataframe_section(df):
     
 
 if __name__ == '__main__':
