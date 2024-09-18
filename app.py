@@ -26,3 +26,18 @@ def create_sorted_companies_tuple(dataframe):
     sorted_companies = [ ' '.join(company) for company in companies_aux ]
     
     return tuple(sorted_companies)
+
+
+
+
+# Função que irá criar 
+def create_sorted_companies_tuple(dataframe):
+    companies = dataframe['company_name'].to_list()
+    
+    companies_aux = [ company.split(' ') for company in companies ]
+    
+    companies_aux.sort(key=len, reverse=True)
+    
+    sorted_companies = [ ' '.join(company) for company in companies_aux ]
+    
+    return tuple(sorted_companies)
