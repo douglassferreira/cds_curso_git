@@ -19,45 +19,12 @@ if __name__ == '__main__':
     main()
 
 def create_answers_section(df): 
-
     st.title("Main Questions Answers")
-
     st.header("First Round")
-
     st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
-
     st.subheader("How many bikes are being sold are bikes from a unique owner?")
-
     st.subheader("Are high kilometer bikes more expensive than bikes with lower kilometer?")
-
-    st.subheader("Are the bikes with a unique owner more expense on avarege than the other bikes?")
-
-    st.subheader("Are the bikes that have more owners also the bikes with more kilometers traveled on avarege?")
-
-    st.subheader("which company has the most bikes registered?")
-
-    st.subheader("which company has the most expensive bikes on avarege?")
-
-    st.subheader("Are the company that has the most expensive bikes registered also the company with the most bikes registered?")
-
-    st.subheader("Which bikes are good for buying?")
-
     return None
-
-# Função que irá criar 
-def create_sorted_companies_tuple(dataframe):
-    companies = dataframe['company_name'].to_list()
-    
-    companies_aux = [ company.split(' ') for company in companies ]
-    
-    companies_aux.sort(key=len, reverse=True)
-    
-    sorted_companies = [ ' '.join(company) for company in companies_aux ]
-    
-    return tuple(sorted_companies)
-
-
-
 
 # Função que irá criar 
 def create_sorted_companies_tuple(dataframe):
